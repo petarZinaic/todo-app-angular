@@ -1,14 +1,14 @@
-var myApp = angular.module("myList", []);
-myApp.controller("myListController", function($scope) {
-  $scope.items = ["Hello World", "Hello Serbia"];
+const myApp = angular.module("myList", []);
+myApp.controller("myListController", ($scope) => {
+  $scope.items = ["Wake up", "Run"];
   $scope.newItem = "";
-  $scope.pushItem = function() {
+  $scope.pushItem = () => {
     if($scope.newItem != "") {
       $scope.items.push($scope.newItem);
       $scope.newItem = "";
     }
   }
-  $scope.deleteItem = function(index) {
+  $scope.deleteItem = (index) => {
     $scope.items.splice(index, 1);
   }
 });
