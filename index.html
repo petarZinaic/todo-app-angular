@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <div class="main" ng-app="myList" ng-controller="myListController">
+    <h1>Todo List</h1>
+    <div class="addItem">
+      <input type="text" placeholder="Add your activity" ng-model="newItem" class="addText">
+      <button ng-click="pushItem()">Add</button>
+      <ul>
+        <li ng-repeat="i in items">{{ i }} <span class="del" ng-click="deleteItem()">X</span></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
